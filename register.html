@@ -5,138 +5,138 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Somobay Somiti</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--
-            <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/Dogfalo/materialize/master/dist/css/materialize.min.css'>
-        -->
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="css/materialize.min.css" />
+
+        <link rel="stylesheet" href="css/materialize.css" />
         <link rel="stylesheet" href="css/lineIcons.min.css" />
-        <link rel="stylesheet" href="css/tripborn.css" />
-        <script type="text/javascript" src="js/modernizr.js"></script>
-        <!--[if lt IE 9]>
-            <script src="assets/js/html5shiv.js"></script>
-            <script src="assets/js/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="css/custom.css" />
     </head>
 
     <body>
-        <div class="main_container_wrapper">
-            <div class="main-container container">
-                <div class="row valign-wrapper">
-                    <div class="col s6">
-                        <img class="responsive-img" src="img/logo.png" />
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"
+                    ><img class="responsive-img" src="img/logo.png"
+                /></a>
+                <div id="nav-mobile" class="right">
+                    <a
+                        href="#regst"
+                        class="waves-effect waves-light btn view-btn modal-trigger"
+                        >Add User</a
+                    >
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal Structure -->
+        <div id="regst" class="modal">
+            <a
+                href="#!"
+                class="modal-close waves-effect waves-green btn-flat right"
+                ><i class="material-icons">close</i></a
+            >
+            <div class="modal-content">
+                <div class="col s6">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix"
+                            >account_balance_wallet
+                        </i>
+                        <input
+                            type="text"
+                            id="username"
+                            class="validate"
+                            name="username"
+                        /><label>Account number</label>
                     </div>
-                    <div class="col s6">
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix"
-                                >account_balance_wallet
-                            </i>
-                            <input
-                                type="text"
-                                id="username"
-                                class="validate"
-                                name="username"
-                            /><label>Account number</label>
-                        </div>
 
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">person</i>
-                            <input
-                                type="text"
-                                id="username"
-                                class="validate"
-                                name="username"
-                            /><label>Name</label>
-                        </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input
+                            type="text"
+                            id="username"
+                            class="validate"
+                            name="username"
+                        /><label>Name</label>
+                    </div>
 
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">person</i>
-                            <input
-                                type="text"
-                                id="username"
-                                class="validate"
-                                name="username"
-                            /><label>Father's Name </label>
-                        </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input
+                            type="text"
+                            id="username"
+                            class="validate"
+                            name="username"
+                        /><label>Father's Name </label>
+                    </div>
 
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">contact_mail</i>
-                            <textarea
-                                id="icon_prefix2"
-                                class="materialize-textarea"
-                            ></textarea>
-                            <label>Address</label>
-                        </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">contact_mail</i>
+                        <textarea
+                            id="icon_prefix2"
+                            class="materialize-textarea"
+                        ></textarea>
+                        <label>Address</label>
+                    </div>
 
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">phone_iphone</i>
-                            <input
-                                type="text"
-                                id="username"
-                                class="validate"
-                                name="username"
-                            />
-                            <label>Mobile</label>
-                        </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">phone_iphone</i>
+                        <input
+                            type="text"
+                            id="username"
+                            class="validate"
+                            name="username"
+                        />
+                        <label>Mobile</label>
+                    </div>
 
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">assignment_ind</i>
-                            <input
-                                type="text"
-                                id="username"
-                                class="validate"
-                                name="username"
-                            />
-                            <label>National Id</label>
-                        </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">assignment_ind</i>
+                        <input
+                            type="text"
+                            id="username"
+                            class="validate"
+                            name="username"
+                        />
+                        <label>National Id</label>
+                    </div>
 
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">event</i>
-                            <select>
-                                <option value="" disabled selected
-                                    >Choose your option</option
-                                >
-                                <option value="1">Monthly</option>
-                                <option value="2">One time</option>
-                                <option value="3">Daily</option>
-                            </select>
-                            <label>Type</label>
-                        </div>
-
-                        <div class="input-field col s12">
-                            <i class="lni-rupee prefix"></i>
-                            <input
-                                type="text"
-                                id="username"
-                                class="validate"
-                                name="username"
-                            />
-                            <label>Amount</label>
-                        </div>
-
-                        <div class="input-field col s12">
-                            <button
-                                class="btn waves-effect waves-light"
-                                type="submit"
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">event</i>
+                        <select>
+                            <option value="" disabled selected
+                                >Choose your option</option
                             >
-                                Register
-                            </button>
-                        </div>
+                            <option value="1">Monthly</option>
+                            <option value="2">One time</option>
+                            <option value="3">Daily</option>
+                        </select>
+                        <label>Type</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <i class="lni-rupee prefix"></i>
+                        <input
+                            type="text"
+                            id="username"
+                            class="validate"
+                            name="username"
+                        />
+                        <label>Amount</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <button
+                            class="btn waves-effect waves-light"
+                            type="submit"
+                        >
+                            Register
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
-        <script src="js/lightslider.js"></script>
-        <script src="js/tripborn.js"></script>
+        <script src="js/custom.js"></script>
     </body>
 </html>

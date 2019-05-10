@@ -87,3 +87,9 @@
 .longin_image {
     width: 100%;
 }
+nav .brand-logo {
+    width: 70px;
+}
+nav {
+    background-color: #ffffff;
+}
