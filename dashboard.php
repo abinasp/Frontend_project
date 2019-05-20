@@ -25,7 +25,10 @@
                     ><img class="responsive-img" src="img/logo.png"
                 /></a>
                 <div id="nav-mobile" class="right">
-                    <button href="#regst" class="waves-effect waves-light btn view-btn modal-trigger">Add User</button>
+                    <button href="#employee" class="waves-effect waves-light btn view-btn modal-trigger">Add Employee</button>
+                </div>
+                <div id="nav-mobile1" style="margin-right:1vh" class="right">
+                    <button href="#regst" class="waves-effect waves-light btn view-btn modal-trigger">Add Customer</button>
                 </div>
             </div>
         </nav>
@@ -69,7 +72,7 @@
             </div>
         </div>
 
-        <!-- Modal Structure -->
+        <!--Customer Modal Structure -->
         <div id="regst" class="modal">
             <a
                 href="#!"
@@ -179,6 +182,56 @@
                             type="submit"
                             onclick="OnSaveCustomer()">
                             Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Customer Modal Structure -->
+        <div id="employee" class="modal">
+            <a
+                href="#!"
+                class="modal-close waves-effect waves-green btn-flat right"
+                ><i class="material-icons">close</i></a
+            >
+            <div class="modal-content">
+                <div class="col s6">
+                    <div class="input-field col s12">
+                    <i class="material-icons prefix">person</i>
+                        <input
+                            type="text"
+                            id="e_name"
+                            class="validate"
+                            name="eName"
+                        /><label>Employee Name</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input
+                            type="text"
+                            id="e_username"
+                            class="validate"
+                            name="eUsername"
+                        /><label>Employee username</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                        <input
+                            type="text"
+                            id="e_password"
+                            class="validate"
+                            name="ePassword"
+                        /><label>Employee password </label>
+                    </div>
+                    <div class="input-field col s12">
+                        <button
+                            class="btn waves-effect waves-light"
+                            type="submit"
+                            onclick="OnCreateEmployee()">
+                            Create
                         </button>
                     </div>
                 </div>

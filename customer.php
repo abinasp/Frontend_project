@@ -42,21 +42,25 @@
                 /></a>
             </div>
         </nav>
-        <div class="container" style="text-align: center; margin-top: 22vh;">
-            
+        <div class="container" style="align-items:center;height:90vh; display:flex; justify-content:center;">
+            <div style="padding:5em; border: 1px solid rgb(234, 234, 234);box-shadow: rgb(165, 160, 160) 0px 1px 0px;border-radius:4px ; max-height: 328px; ">
             <p>
-                Account number: <?php echo $customerDetails['account_number'];?>
+                <b>Account number:</b> <?php echo $customerDetails['account_number'];?>
             </p>
             <p>
-                Name: <?php echo $customerDetails['name'];?>
+                <b>Name:</b> <?php echo $customerDetails['name'];?>
             </p>
             <p>
-                Mobile: <?php echo $customerDetails['mobile'];?>
+                <b>Mobile:</b> <?php echo $customerDetails['mobile'];?>
             </p>
             <p>
-                Amount: <?php echo $customerDetails['amount'];?>
+                <b>Amount:</b> <?php echo $customerDetails['amount'];?>
             </p>
             <a href="#regst" style="margin-top:5vh;" class="waves-effect waves-light btn view-btn modal-trigger">Update</a>
+            </div>
+            <div style="  padding:5em;border: 1px solid rgb(234, 234, 234);box-shadow: rgb(165, 160, 160) 0px 1px 0px;;border-radius:4px;  min-height: 328px; "><img style="max-width: 170px;" src="img/logo.png"
+                />
+            </div>
         </div>
 
         <!-- Modal Structure -->

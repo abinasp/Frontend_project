@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     //Popup
     $("#regst").modal();
+    $('#employee').modal();
 });
 
 function OnLogin(){
@@ -116,12 +117,14 @@ function OnSaveCustomer(){
     }).then(function(json){
         if(json.success){
             $("#regst").modal('close');
+            window.location.reload();
         }else{
             alert(json.error);
             $("#regst").modal('close');
         }
     })
 }
+
 function OnUpdateCustmer(){
     var cAccount = document.getElementById('c_account').value;
     if(cAccount === "" || !cAccount){
@@ -200,4 +203,22 @@ function OnUpdateCustmer(){
             $("#regst").modal('close');
         }
     })
+}
+
+function OnCreateEmployee(){
+    var cAccount = document.getElementById('e_name').value;
+    if(cAccount === "" || !cAccount){
+        alert('Please enter employee name');
+        return;
+    }
+    var cName = document.getElementById('e_username').value;
+    if(cName === "" || !cName){
+        alert('Please enter employee username');
+        return;
+    }
+    var cFatherName = document.getElementById('e_password').value;
+    if(cFatherName === "" || !cFatherName){
+        alert("Please enter employee pasword");
+        return;
+    }  
 }
