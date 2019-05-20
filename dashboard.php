@@ -1,3 +1,10 @@
+<?php
+    require_once('config.php');
+    $getCustomers = json_decode(@file_get_contents("$API_URL/customer/get-customers"),TRUE);
+    $customers = $getCustomers['data'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,34 +45,24 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>9154879235</td>
-                                <td>Sudhansu</td>
-                                <td>8050579390</td>
-                                <td><i class="lni-rupee prefix"></i> 15,000</td>
+                            <?php if(sizeof($customers)):?>
+                                <?php foreach($customers as $customer):?>
+                                <tr>
+                                <td><?php echo $customer['account_number'];?></td>
+                                <td><?php echo $customer['name'];?></td>
+                                <td><?php echo $customer['mobile'];?></td>
+                                <td><i class="lni-rupee prefix"></i> <?php echo $customer['amount'];?></td>
                                 <td>
                                     <a
-                                        href="#regst"
+                                        href="<?php echo "http://localhost/Frontend_project/customer.php?id=".$customer['id'];?>"
                                         class="waves-effect waves-light btn view-btn modal-trigger"
                                     >
-                                        Update</a
+                                        View</a
                                     >
                                 </td>
                             </tr>
-                            <tr>
-                                <td>9154879235</td>
-                                <td>Sudhansu</td>
-                                <td>8050579390</td>
-                                <td><i class="lni-rupee prefix"></i> 15,000</td>
-                                <td>
-                                    <a
-                                        href="#regst"
-                                        class="waves-effect waves-light btn view-btn modal-trigger"
-                                    >
-                                        Update</a
-                                    >
-                                </td>
-                            </tr>
+                                <?php endforeach;?>
+                            <?php endif;?>
                         </tbody>
                     </table>
                 </div>
@@ -169,11 +166,18 @@
                     </div>
 
                     <div class="input-field col s12">
+                        <input
+                            type="file"
+                            id="c_image"
+                            class="validate"
+                            name="cImage"
+                        />
+                    </div>
+                    <div class="input-field col s12">
                         <button
                             class="btn waves-effect waves-light"
                             type="submit"
-                            onclick="OnRegisterCustomer()"
-                        >
+                            onclick="OnSaveCustomer()">
                             Register
                         </button>
                     </div>
@@ -186,3 +190,6 @@
         <script src="js/main.js"></script>
     </body>
 </html>
+
+
+
