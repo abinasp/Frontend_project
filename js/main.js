@@ -171,6 +171,15 @@ function OnUpdateCustmer(){
     if(!auth || auth === ""){
         alert('Please login');
     }
+    var input = document.querySelector('input[type="file"]');
+
+    var data = new FormData();
+    data.append('image',input.files[0]);
+
+    fetch(`${API_URL}/customer/update-customer`,{
+        
+    })
+
     var reqBody = {
         auth: auth,
         customer: {
