@@ -206,19 +206,50 @@ function OnUpdateCustmer(){
 }
 
 function OnCreateEmployee(){
-    var cAccount = document.getElementById('e_name').value;
-    if(cAccount === "" || !cAccount){
+    var eName = document.getElementById('e_name').value;
+    if(eName === "" || !eName){
         alert('Please enter employee name');
         return;
     }
-    var cName = document.getElementById('e_username').value;
-    if(cName === "" || !cName){
+    var eUsername = document.getElementById('e_username').value;
+    if(eUsername === "" || !eUsername){
         alert('Please enter employee username');
         return;
     }
-    var cFatherName = document.getElementById('e_password').value;
-    if(cFatherName === "" || !cFatherName){
+    var ePassword = document.getElementById('e_password').value;
+    if(ePassword === "" || !ePassword){
         alert("Please enter employee pasword");
         return;
     }  
+
+    var auth = localStorage.getItem('auth');
+    if(!auth || auth === ""){
+        alert('Please login');
+    }
+    var reqBody = {
+        auth: auth,
+        user: {
+            name: eName,
+            username: eUsername,
+            password: ePassword
+        }
+    };
+    fetch(`${API_URL}/user/create-user`,{
+        method: 'POST',
+        headers: {
+			Accept: "application/json",
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(reqBody)
+    }).then(function(response){
+        return response.json();
+    }).then(function(json){
+        if(json.success){
+            $("#regst").modal('close');
+            window.location.reload();
+        }else{
+            alert(json.error);
+            $("#regst").modal('close');
+        }
+    })
 }

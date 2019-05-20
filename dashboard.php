@@ -21,7 +21,7 @@
     <body>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo"
+                <a href="<?php echo "$UI_URL/dashboard.php"?>" class="brand-logo"
                     ><img class="responsive-img" src="img/logo.png"
                 /></a>
                 <div id="nav-mobile" class="right">
@@ -29,6 +29,9 @@
                 </div>
                 <div id="nav-mobile1" style="margin-right:1vh" class="right">
                     <button href="#regst" class="waves-effect waves-light btn view-btn modal-trigger">Add Customer</button>
+                </div>
+                <div id="nav-mobile2" style="margin-right:1vh" class="right">
+                    <a href="<?php echo "$UI_URL/employees.php"?>" class="waves-effect waves-light btn view-btn">Employee List</a>
                 </div>
             </div>
         </nav>
