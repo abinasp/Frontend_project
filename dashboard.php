@@ -1,7 +1,11 @@
 <?php
     require_once('config.php');
     $getCustomers = json_decode(@file_get_contents("$API_URL/customer/get-customers"),TRUE);
-    $customers = $getCustomers['data'];
+    if(isset($getCustomers['data'])){
+        $customers = $getCustomers['data'];
+    }else{
+        $customers= array();
+    }
 ?>
 
 
